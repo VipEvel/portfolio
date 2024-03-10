@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
+import React from "react";
 import { motion } from "framer-motion";
 
-export default function Home() {
+const page = () => {
   return (
     <motion.div
       className="h-full"
@@ -13,16 +13,14 @@ export default function Home() {
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* image container */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex justify-center items-center">
-          <div className="hero-image h-full overflow-hidden max-w-[400px] max-h-[400px] w-full">
-            <Image
-              fill
-              src="/assets/img/vip-hero.png"
-              alt="VIP Hero"
-              className="object-contain"
-              style={{ borderRadius: "50%" }}
-            />
-          </div>
+        <div className="h-1/2 lg:h-full lg:w-1/2 relative">
+          {/* <Image
+            fill
+            src="/assets/img/vip-hero.png"
+            alt="VIP Hero"
+            className="object-contain"
+            style={{ borderRadius: "50%" }}
+          /> */}
         </div>
         {/* text container */}
         <div className="h-1/2 lg:h-full lg:w-1/2">
@@ -52,4 +50,6 @@ export default function Home() {
       </div>
     </motion.div>
   );
-}
+};
+
+export default page;
