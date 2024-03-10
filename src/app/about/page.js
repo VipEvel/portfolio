@@ -17,8 +17,8 @@ const About = () => {
         <div className="p-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64">
           {/* biography container */}
           <div className="flex flex-col gap-12 justify-center">
-            <h1></h1> {'https://www.youtube.com/watch?v=DJaZUFK8Kv4'}
-            <p>1:16:18</p>
+            {/* <h1></h1> {'https://www.youtube.com/watch?v=DJaZUFK8Kv4'}
+            <p>1:16:18</p> */}
             <span></span>
           </div>
           {/* skills container */}
