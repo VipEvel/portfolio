@@ -1,11 +1,16 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Signature } from "@/assets/Icons";
 import moment from "moment";
 
-const About = () => {
+const AboutPage = () => {
+  const skillRef = useRef();
+  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+  const experienceRef = useRef();
+  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+
   const skillLists = [
     "JavaScript",
     "React.js",
@@ -120,11 +125,23 @@ Let's build something extraordinary together!`}</span>
             </div>
           </div>
           {/* skills container */}
-          <div className="flex flex-col gap-12 justify-center">
+          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
             {/* SKILL title */}
-            <h1 className="font-bold text-2xl">SKILLS</h1>
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="font-bold text-2xl"
+            >
+              SKILLS
+            </motion.h1>
             {/* skill list */}
-            <div className="flex gap-4 flex-wrap">
+            <motion.div
+              className="flex gap-4 flex-wrap"
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+            >
               {skillLists.map((skill) => (
                 <>
                   <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
@@ -132,14 +149,29 @@ Let's build something extraordinary together!`}</span>
                   </div>
                 </>
               ))}
-            </div>
+            </motion.div>
           </div>
           {/* experience container */}
-          <div className="flex flex-col gap-12 justify-center pb-48">
+          <div
+            className="flex flex-col gap-12 justify-center pb-48"
+            ref={experienceRef}
+          >
             {/* experience title */}
-            <h1 className="font-bold text-2xl">EXPERIENCE</h1>
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isExperienceRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="font-bold text-2xl"
+            >
+              EXPERIENCE
+            </motion.h1>
             {/* experience list */}
-            <div className="">
+            <motion.div
+              initial={{ x: "-300px" }}
+              animate={isExperienceRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className=""
+            >
               {jobsDetails.reverse().map((job, index) => {
                 return (
                   <div
@@ -175,12 +207,14 @@ Let's build something extraordinary together!`}</span>
                     </div>
                     {/* right */}
                     <div
-                      className={`w-full ${index % 2 === 0 ? "" : "order-[-1]"}`}
+                      className={`w-full ${
+                        index % 2 === 0 ? "" : "order-[-1]"
+                      }`}
                     ></div>
                   </div>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
         </div>
         {/* svg container */}
@@ -190,4 +224,4 @@ Let's build something extraordinary together!`}</span>
   );
 };
 
-export default About;
+export default AboutPage;

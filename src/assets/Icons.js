@@ -30,6 +30,13 @@ export const LinkedIn = () => (
   </svg>
 );
 
+export const Arrow = () => (
+  <svg viewBox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2 9.5H27M27 9.5L17.625 2M27 9.5L17.625 17" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  
+);
+
 export const Signature = () => (
   <svg
     width="201"

@@ -54,43 +54,9 @@ body {
   border-radius: 10px;
 }
 
-/* Timeline css */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+.form-input:focus .label-placeholder{
+  top: -10px;
 }
-
-.entry {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.even .content {
-  order: 1;
-}
-
-.odd .content {
-  order: -1;
-}
-
-.content {
-  flex: 1;
-  padding: 20px;
-  border: 2px solid #3498db;
-  border-radius: 10px;
-  background-color: #f1f1f1;
-}
-
-.title {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.date {
-  color: #777;
-}
-
-.description {
-  margin-top: 10px;
+.form-input:focus input{
+  border: 1px solid;
 }

@@ -130,7 +130,9 @@ const NavBar = () => {
                   variants={listItemVariant}
                   key={`${index}-${link?.title?.toLowerCase()}`}
                 >
-                  <Link href={link?.url}>{link?.title}</Link>
+                  <Link href={link?.url} onClick={() => setOpen(false)}>
+                    {link?.title}
+                  </Link>
                 </motion.div>
               );
             })}
