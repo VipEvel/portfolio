@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { SVGBackGround } from "@/assets/Icons";
 
 const ContactPage = () => {
   return (
@@ -12,13 +13,12 @@ const ContactPage = () => {
       transition={{ duration: 1 }}
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-        <div>
-          <form action="">
-            <div className="form-input bg-white shadow-md rounded-xl p-4 relative">
-              <label className="label-placeholder text-slate-500 absolute pl-2" htmlFor="user_name">Name</label>
-              <input type="text" id='user_name' className="focus:outline-none"/>
-            </div>
-          </form>
+        <div className="flex items-center gap-4 flex-col lg:flex-row md:flex-row">
+          <div className="">
+            <SVGBackGround />
+          </div>
+          <div className="rounded-xl h-2/3 w-2/3 min-h-[30rem] max-h-[30rem] min-w-[35rem] max-w-[35rem] bg-sky-800">
+          </div>
         </div>
       </div>
     </motion.div>

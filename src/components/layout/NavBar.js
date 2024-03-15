@@ -84,20 +84,19 @@ const NavBar = () => {
       </ul>
       {/* Social links */}
       <div className="hidden lg:flex gap-4">
-        <Link href="#">
-          <GitHub />
+        <Link href="https://www.github.com/vipevel/" passHref legacyBehavior>
+          <a target="_blank" rel="noopener noreferrer"><GitHub /></a>
         </Link>
-        <Link href="#">
-          <LinkedIn />
+        <Link href="https://www.linkedin.com/in/vipin-sharma-b59996205/" passHref legacyBehavior>
+          <a target="_blank" rel="noopener noreferrer"><LinkedIn /></a>
         </Link>
       </div>
       {/* Hamburger Menu */}
       <div className="md:hidden">
         {/* Hamburger Button */}
         <button
-          className={`h-8 w-10 flex flex-col justify-between relative ${
-            open ? "z-20" : ""
-          }`}
+          className={`h-8 w-10 flex flex-col justify-between relative ${open ? "z-20" : ""
+            }`}
           onClick={() => setOpen((prev) => !prev)}
         >
           <motion.div
